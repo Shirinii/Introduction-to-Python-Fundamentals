@@ -1,0 +1,11 @@
+quote = input("enter a 1 sentence quote, non-alpha separated words: ").upper() + ' '
+word = ""
+for i in quote:
+    if i.isalpha():
+        word += i
+    elif i == " ":
+        if word[0] >= "H":
+            print(word)
+            word = ""
+        elif word[0] <= "G":
+            word = ""
